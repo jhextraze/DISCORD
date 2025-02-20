@@ -1,0 +1,244 @@
+/* -------------RESETS------------- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1{
+    @apply font-["Poppins"];
+}
+body, html{
+    @apply w-[100%] bg-[#020231] overflow-x-hidden m-0 p-0;
+}
+/* Header */
+/* header{
+    @apply fixed top-0 left-0 w-full px-6 py-4 shadow-md transition-all duration-300;
+}
+.header.scroll{
+    @apply bg-[#161CBB] shadow-lg;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    backdrop-filter: blur(10px);
+} */
+.header .header-wrapper{
+    @apply flex items-center justify-around pt-4 pb-4;
+}
+.header .header-nav{
+    @apply hidden;
+}
+.header .header-logo img{
+    @apply w-32;
+}
+.header .discord-btn a{
+    @apply bg-white py-1 px-6 text-sm rounded-3xl items-center font-medium;
+}
+.header .burger-btn-real{
+    @apply flex flex-col space-y-0.5 p-2 ;
+}
+.header .burger-btn-real span{
+    @apply block w-7 h-[5px] bg-white;
+}
+
+/* First Page */
+.first-page{
+    @apply mb-12;
+}
+.first-page .first-wrapper{
+    @apply flex flex-col justify-center items-center pt-8 px-10;
+}
+.first-page .first-pic img{
+    @apply w-96;
+}
+.first-page .first-text h1{
+    @apply text-[white] uppercase tracking-[.01em] relative text-center font-["Poppins"] font-extrabold text-[2.2rem] mt-14 mb-8 leading-9;
+}
+.first-page .first-text p{
+    @apply text-[white] relative text-center mb-8 text-[16px];
+}
+.first-page .first-text{
+    @apply w-[94%]
+}
+.first-page .first-button{
+    @apply bg-white py-4 px-8 rounded-[40rem] flex items-center gap-2 font-medium mb-6;
+}
+.first-page .first-button img{
+    @apply w-5;
+}
+.first-page .first-button img:hover{
+    @apply text-[#161CBB];
+}
+
+.first-page .first-button a{
+    @apply text-lg;
+}
+.first-page .first-button a:hover{
+    @apply text-[#161CBB];
+}
+.first-page .first-button-two{
+    @apply bg-[#161CBB] py-4 px-8 rounded-[40rem] flex items-center gap-2 font-medium;
+}
+.first-page .first-button-two:hover{
+    @apply shadow-xl;
+}
+.first-page .first-button-two a{
+    @apply text-white text-[1.08rem];
+}
+
+/* Second Page */
+.second-page{
+    @apply p-8 mb-40;
+}
+.second-wrapper{
+    @apply border-[1px] pt-10 pb-5 px-8 rounded-[2rem] justify-center items-center;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 2px 52px #452a7c1a, inset 0 0 0 3px #ffffff26;
+    background-image: linear-gradient(135deg, #fff6, #ffffff1a 45%, #ffffff12 72%);
+}
+.second-page .second-text{
+    @apply mb-12 w-[85%] items-center justify-center;
+}
+.second-page .second-text h1{
+    @apply text-[white] uppercase tracking-[.01em] relative text-left font-["Poppins"] font-extrabold text-[2rem] mt-5 mb-3 leading-9;
+}
+.second-page .second-text p{
+    @apply text-white text-left text-[1rem];
+}
+.second-page .second-vid video{
+    @apply rounded-[2rem] object-cover -z-[100%] w-[100%] h-[100%];
+}
+/* .second-page .second-gif img{
+    @apply w-28 ;
+} */
+
+
+/* Third Page */
+.third-page{
+    @apply p-8 mb-40;
+}
+.third-wrapper{
+    @apply border-[1px] pt-10 pb-5 px-8 rounded-[2rem] justify-center items-center;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 2px 52px #452a7c1a, inset 0 0 0 3px #ffffff26;
+    background-image: linear-gradient(135deg, #fff6, #ffffff1a 45%, #ffffff12 72%);
+}
+.third-page .third-text{
+    @apply mb-12 w-[85%] items-center justify-center;
+}
+.third-page .third-text h1{
+    @apply text-[white] uppercase tracking-[.01em] relative text-left font-["Poppins"] font-extrabold text-[2rem] mt-5 mb-3 leading-9;
+}
+.third-page .third-text p{
+    @apply text-white text-left text-[1rem];
+}
+.third-page .third-vid video{
+    @apply rounded-[2rem] object-cover -z-[100%] w-[100%] h-[100%];
+}
+
+/* Fourth */
+.fourth-page{
+    @apply p-8 mb-40;
+}
+.fourth-wrapper{
+    @apply border-[1px] pt-10 pb-5 px-8 rounded-[2rem] justify-center items-center;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 2px 52px #452a7c1a, inset 0 0 0 3px #ffffff26;
+    background-image: linear-gradient(135deg, #fff6, #ffffff1a 45%, #ffffff12 72%);
+}
+.fourth-page .fourth-text{
+    @apply mb-12 w-[85%] items-center justify-center;
+}
+.fourth-page .fourth-text h1{
+    @apply text-[white] uppercase tracking-[.01em] relative text-left font-["Poppins"] font-extrabold text-[2rem] mt-5 mb-3 leading-9;
+}
+.fourth-page .fourth-text p{
+    @apply text-white text-left text-[1rem];
+}
+.fourth-page .fourth-vid video{
+    @apply rounded-[2rem] object-cover -z-[100%] w-[100%] h-[100%];
+}
+
+/* Fifth */
+.fifth-page{
+    @apply p-8 mb-40;
+}
+.fifth-wrapper{
+    @apply border-[1px] pt-10 pb-5 px-8 rounded-[2rem] justify-center items-center;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 2px 52px #452a7c1a, inset 0 0 0 3px #ffffff26;
+    background-image: linear-gradient(135deg, #fff6, #ffffff1a 45%, #ffffff12 72%);
+}
+.fifth-page .fifth-text{
+    @apply mb-12 w-[85%] items-center justify-center;
+}
+.fifth-page .fifth-text h1{
+    @apply text-[white] uppercase tracking-[.01em] relative text-left font-["Poppins"] font-extrabold text-[2rem] mt-5 mb-3 leading-9;
+}
+.fifth-page .fifth-text p{
+    @apply text-white text-left text-[1rem];
+}
+.fifth-page .fifth-vid video{
+    @apply rounded-[2rem] object-cover -z-[100%] w-[100%] h-[100%];
+}
+
+/* Sixth */
+.sixth-page{
+    @apply p-8 mb-40;
+}
+.sixth-wrapper{
+    @apply border-[1px] pt-10 pb-5 px-8 rounded-[2rem] justify-center items-center;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 2px 52px #452a7c1a, inset 0 0 0 3px #ffffff26;
+    background-image: linear-gradient(135deg, #fff6, #ffffff1a 45%, #ffffff12 72%);
+}
+.sixth-page .sixth-text{
+    @apply mb-12 w-[85%] items-center justify-center;
+}
+.sixth-page .sixth-text h1{
+    @apply text-[white] uppercase tracking-[.01em] relative text-left font-["Poppins"] font-extrabold text-[2rem] mt-5 mb-3 leading-9;
+}
+.sixth-page .sixth-text p{
+    @apply text-white text-left text-[1rem];
+}
+.sixth-page .sixth-vid video{
+    @apply rounded-[2rem] object-cover -z-[100%] w-[100%] h-[100%];
+}
+
+/* Seventh */
+.seventh-page{
+    @apply p-8 mb-40;
+}
+.seventh-wrapper{
+    @apply border-[1px] pt-10 pb-5 px-8 rounded-[2rem] justify-center items-center;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 2px 52px #452a7c1a, inset 0 0 0 3px #ffffff26;
+    background-image: linear-gradient(135deg, #fff6, #ffffff1a 45%, #ffffff12 72%);
+}
+.seventh-page .seventh-text{
+    @apply mb-12 w-[85%] items-center justify-center;
+}
+.seventh-page .seventh-text h1{
+    @apply text-[white] uppercase tracking-[.01em] relative text-left font-["Poppins"] font-extrabold text-[2rem] mt-5 mb-3 leading-9;
+}
+.seventh-page .seventh-text p{
+    @apply text-white text-left text-[1rem];
+}
+.seventh-page .seventh-vid video{
+    @apply rounded-[2rem] object-cover -z-[100%] w-[100%] h-[100%];
+}
+
+
+/* Eighth */
+.eighth-page .eighth-text h1{
+    @apply text-white uppercase tracking-[.01em] text-center font-["Poppins"] font-extrabold text-[2rem] mt-5 mb-8 leading-9;
+}
+.eighth-page .eighth-button{
+    @apply flex gap-4  py-4 px-8 items-center font-medium mb-6 justify-center;
+}
+
+.eighth-page .eighth-button a{
+    @apply text-white bg-[#161CBB] py-4 px-8 flex gap-5 rounded-[40rem] items-center; 
+}
+.first-page .first-button{
+    @apply bg-white py-4 px-8 rounded-[40rem] flex items-center gap-2 font-medium mb-6;
+}
+.eighth-page .eighth-button img{
+    @apply w-5
+}
