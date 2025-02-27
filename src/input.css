@@ -12,17 +12,21 @@ body, html{
 /* Header */
 /* header{
     @apply fixed top-0 left-0 w-full px-6 py-4 shadow-md transition-all duration-300;
-}
-.header.scroll{
-    @apply bg-[#161CBB] shadow-lg;
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
-    backdrop-filter: blur(10px);
+} */
+/* header::-webkit-scrollbar{
+    @apply bg-white shadow-lg;
 } */
 .header .header-wrapper{
-    @apply flex items-center justify-around pt-4 pb-4;
+    @apply flex items-center justify-between pt-4 pb-4 px-8 md:pt-8;
 }
-.header .header-nav{
-    @apply hidden;
+.header .header-nav ul{
+    @apply hidden lg:flex gap-6;
+}
+.header .header-nav a{
+    @apply lg:text-white;
+}
+.header .header-nav a:hover{
+    @apply lg:underline font-semibold;
 }
 .header .header-logo img{
     @apply w-32;
@@ -31,7 +35,10 @@ body, html{
     @apply bg-white py-1 px-6 text-sm rounded-3xl items-center font-medium;
 }
 .header .burger-btn-real{
-    @apply flex flex-col space-y-0.5 p-2 ;
+    @apply flex flex-col space-y-0.5 p-2 lg:hidden;
+}
+.header .burger-btn{
+    @apply flex items-center gap-4;
 }
 .header .burger-btn-real span{
     @apply block w-7 h-[5px] bg-white;
@@ -42,19 +49,25 @@ body, html{
     @apply mb-12;
 }
 .first-page .first-wrapper{
-    @apply flex flex-col justify-center items-center pt-8 px-10;
+    @apply flex flex-col justify-center items-center pt-8 px-10 lg:px-20 gap-8;
 }
 .first-page .first-pic img{
-    @apply w-96;
+    @apply min-w-[24rem] md:max-w-[36rem];
+}
+.first-party{
+    @apply lg:flex flex-row-reverse;
+}
+.two-buttons{
+    @apply md:flex items-start gap-4 pt-8;
 }
 .first-page .first-text h1{
-    @apply text-[white] uppercase tracking-[.01em] relative text-center font-["Poppins"] font-extrabold text-[2.2rem] mt-14 mb-8 leading-9;
+    @apply text-[white] uppercase tracking-[.01em] relative text-center font-["Poppins"] font-extrabold text-[2.2rem] mt-14 mb-4 leading-9 lg:text-left;
 }
 .first-page .first-text p{
-    @apply text-[white] relative text-center mb-8 text-[16px];
+    @apply text-[white] relative text-center mb-8 text-[16px] md:font-semibold lg:text-left;
 }
 .first-page .first-text{
-    @apply w-[94%]
+    @apply w-[94%] lg:w-[100%];
 }
 .first-page .first-button{
     @apply bg-white py-4 px-8 rounded-[40rem] flex items-center gap-2 font-medium mb-6;
@@ -76,18 +89,20 @@ body, html{
     @apply bg-[#161CBB] py-4 px-8 rounded-[40rem] flex items-center gap-2 font-medium;
 }
 .first-page .first-button-two:hover{
-    @apply shadow-xl;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 9px #8891f270;
 }
 .first-page .first-button-two a{
     @apply text-white text-[1.08rem];
 }
+
 
 /* Second Page */
 .second-page{
     @apply p-8 mb-40;
 }
 .second-wrapper{
-    @apply border-[1px] pt-10 pb-5 px-8 rounded-[2rem] justify-center items-center;
+    @apply border-[1px] pt-10 pb-5 px-8 rounded-[2rem] justify-center items-center md:flex md:flex-row-reverse w-full gap-x-6 pt-2 pb-2 ;
     backdrop-filter: blur(50px);
     box-shadow: 0 2px 52px #452a7c1a, inset 0 0 0 3px #ffffff26;
     background-image: linear-gradient(135deg, #fff6, #ffffff1a 45%, #ffffff12 72%);
@@ -114,7 +129,7 @@ body, html{
     @apply p-8 mb-40;
 }
 .third-wrapper{
-    @apply border-[1px] pt-10 pb-5 px-8 rounded-[2rem] justify-center items-center;
+    @apply border-[1px] pt-10 pb-5 px-8 rounded-[2rem] justify-center items-center md:grid grid-cols-2 w-[100%];
     backdrop-filter: blur(50px);
     box-shadow: 0 2px 52px #452a7c1a, inset 0 0 0 3px #ffffff26;
     background-image: linear-gradient(135deg, #fff6, #ffffff1a 45%, #ffffff12 72%);
@@ -137,7 +152,7 @@ body, html{
     @apply p-8 mb-40;
 }
 .fourth-wrapper{
-    @apply border-[1px] pt-10 pb-5 px-8 rounded-[2rem] justify-center items-center;
+    @apply border-[1px] pt-10 pb-5 px-8 rounded-[2rem] justify-center items-center md:flex flex-row-reverse w-full gap-x-6 pt-2 pb-2 ;
     backdrop-filter: blur(50px);
     box-shadow: 0 2px 52px #452a7c1a, inset 0 0 0 3px #ffffff26;
     background-image: linear-gradient(135deg, #fff6, #ffffff1a 45%, #ffffff12 72%);
@@ -160,7 +175,7 @@ body, html{
     @apply p-8 mb-40;
 }
 .fifth-wrapper{
-    @apply border-[1px] pt-10 pb-5 px-8 rounded-[2rem] justify-center items-center;
+    @apply border-[1px] pt-10 pb-5 px-8 rounded-[2rem] justify-center items-center md:grid grid-cols-2 w-[100%];
     backdrop-filter: blur(50px);
     box-shadow: 0 2px 52px #452a7c1a, inset 0 0 0 3px #ffffff26;
     background-image: linear-gradient(135deg, #fff6, #ffffff1a 45%, #ffffff12 72%);
@@ -183,7 +198,7 @@ body, html{
     @apply p-8 mb-40;
 }
 .sixth-wrapper{
-    @apply border-[1px] pt-10 pb-5 px-8 rounded-[2rem] justify-center items-center;
+    @apply border-[1px] pt-10 pb-5 px-8 rounded-[2rem] justify-center items-center md:flex flex-row-reverse w-full gap-x-6 pt-2 pb-2 ;
     backdrop-filter: blur(50px);
     box-shadow: 0 2px 52px #452a7c1a, inset 0 0 0 3px #ffffff26;
     background-image: linear-gradient(135deg, #fff6, #ffffff1a 45%, #ffffff12 72%);
@@ -206,7 +221,7 @@ body, html{
     @apply p-8 mb-40;
 }
 .seventh-wrapper{
-    @apply border-[1px] pt-10 pb-5 px-8 rounded-[2rem] justify-center items-center;
+    @apply border-[1px] pt-10 pb-5 px-8 rounded-[2rem] justify-center items-center md:grid grid-cols-2 w-[100%];
     backdrop-filter: blur(50px);
     box-shadow: 0 2px 52px #452a7c1a, inset 0 0 0 3px #ffffff26;
     background-image: linear-gradient(135deg, #fff6, #ffffff1a 45%, #ffffff12 72%);
@@ -226,8 +241,14 @@ body, html{
 
 
 /* Eighth */
+.eighth-page{
+    /* @apply pb-20 */
+}
 .eighth-page .eighth-text h1{
     @apply text-white uppercase tracking-[.01em] text-center font-["Poppins"] font-extrabold text-[2rem] mt-5 mb-8 leading-9;
+}
+.eighth-page .eighth-text{
+    @apply px-4;
 }
 .eighth-page .eighth-button{
     @apply flex gap-4  py-4 px-8 items-center font-medium mb-6 justify-center;
@@ -240,5 +261,52 @@ body, html{
     @apply bg-white py-4 px-8 rounded-[40rem] flex items-center gap-2 font-medium mb-6;
 }
 .eighth-page .eighth-button img{
-    @apply w-5
+    @apply w-5;
+}
+.eighth-page .eighth-image img{
+    @apply w-[100%];
+}
+
+/* Footer */
+.footer{
+    @apply bg-[#4b4989] py-12 px-6;
+}
+.footer .footer-language{
+    @apply text-white flex items-center gap-1 mb-10 text-base;
+}
+.footer .footer-icon{
+    @apply text-white flex gap-5 text-[1.5rem] mb-10;
+}
+.footer .footer-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 24px;
+    justify-items: start;
+}
+.footer .footer-items .product,.company,.resources,.policies{
+    @apply text-white grid mb-10;
+}
+.footer .footer-items .product p,.company p,.resources p,.policies p{
+    @apply mb-4 font-semibold;
+}
+.footer .footer-items .product a,.company a,.resources a,.policies a{
+    @apply text-base mb-3;
+}
+.footer .footer-line{
+    @apply flex items-center justify-center;
+}
+.footer .footer-line span{
+    @apply w-[98%] h-[1px] border-solid bg-white block;
+}
+.footer .footer-logo{
+    @apply flex items-center justify-between mt-10;
+}
+.footer .footer-logo img{
+    @apply w-[8rem];
+}
+.footer .footer-logo a{
+    @apply py-2 px-3 bg-[#5865f2] text-white rounded-[40rem] text-sm font-semibold delay-75 ;
+}
+.footer .footer-logo a:hover{
+    @apply bg-[#7289da];
 }
